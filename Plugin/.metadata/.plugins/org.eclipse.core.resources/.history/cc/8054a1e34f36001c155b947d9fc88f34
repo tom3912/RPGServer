@@ -49,11 +49,12 @@ public class UseClassSelectListener implements Listener
 	{	
 		Player player = (Player) event.getWhoClicked();	
 
-		if(event.getSlot() == 8);
+		if(event.getSlot() == 8 && !player.getOpenInventory().getType().equals(InventoryType.CRAFTING));
 	    {
             event.setResult(Result.DENY);
             event.setCancelled(true);
-	    }			
+	    }	
+		
 		if(event.getCurrentItem() == null) 
 		{
 			return;
