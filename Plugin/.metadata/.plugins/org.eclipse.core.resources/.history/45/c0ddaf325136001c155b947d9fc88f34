@@ -55,7 +55,7 @@ public class UseClassSelectListener implements Listener
 	            event.setResult(Result.DENY);
 	            event.setCancelled(true);
 		    }
-		}	
+		}			
 		if(event.getCurrentItem() == null) 
 		{
 			return;
