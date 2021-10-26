@@ -48,7 +48,7 @@ public class UseClassSelectListener implements Listener
 	public void onClick(InventoryClickEvent event) 
 	{	
 		Player player = (Player) event.getWhoClicked();	
-		
+	
 		if(event.getCurrentItem() == null) 
 		{
 			return;
