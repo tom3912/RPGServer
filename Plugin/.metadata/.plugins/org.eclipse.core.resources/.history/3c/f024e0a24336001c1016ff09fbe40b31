@@ -255,7 +255,7 @@ public class Master extends JavaPlugin
 	    			Integer maxmana = JoinListener.getPlayerMaxMana(online);
 	    			Integer level = JoinListener.getPlayerLevel(online);
 	    			
-		    		gui += ChatColor.GOLD + " Lvl " + ChatColor.WHITE + level + ChatColor.GRAY + "  : " + ChatColor.RED + " ❤ " + ChatColor.WHITE + vhealth + "/" + vmhealth + ChatColor.GRAY + "  : " + ChatColor.AQUA + " ✦ " + ChatColor.WHITE + mana + "/" + maxmana;
+		    		gui = ChatColor.GOLD + " Lvl " + ChatColor.WHITE + level + ChatColor.GRAY + "  : " + ChatColor.RED + " ❤ " + ChatColor.WHITE + vhealth + "/" + vmhealth + ChatColor.GRAY + "  : " + ChatColor.AQUA + " ✦ " + ChatColor.WHITE + mana + "/" + maxmana;
 
 		    		List<LivingEntity> entities = world.getLivingEntities();
 		    		for (LivingEntity entity : entities)

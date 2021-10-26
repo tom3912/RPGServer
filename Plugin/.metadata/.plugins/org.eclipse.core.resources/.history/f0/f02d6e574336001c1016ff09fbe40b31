@@ -78,6 +78,7 @@ public class Master extends JavaPlugin
 		    public void run()
 		    {
 		    	HealTimer += 1;
+		    	String gui = ""; 
 		    	
 		    	if(Bukkit.getOnlinePlayers().equals(null)) 
 		    	{
@@ -86,7 +87,6 @@ public class Master extends JavaPlugin
 		    	
 		    	for (Player online : Bukkit.getOnlinePlayers()) 
 				{
-			    	String gui = ""; 
 		    		PersistentDataContainer data = online.getPersistentDataContainer();
 		    		//Check for essential items
 		    		if (online.getInventory().getItem(8) == null) 
