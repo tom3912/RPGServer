@@ -48,10 +48,12 @@ public class UseClassSelectListener implements Listener
 	public void onClick(InventoryClickEvent event) 
 	{	
 		Player player = (Player) event.getWhoClicked();	
-		if(player.getOpenInventory().getType().equals(InventoryType.CRAFTING))
-		{
-			return;
-		}			
+
+		if(event.getSlot() == 8 && !player.getOpenInventory().getType().equals(InventoryType.CRAFTING));
+	    {
+            event.setResult(Result.DENY);
+            event.setCancelled(true);
+	    }			
 		if(event.getCurrentItem() == null) 
 		{
 			return;
@@ -138,11 +140,6 @@ public class UseClassSelectListener implements Listener
 				player.openInventory(UseClassSelectListener.warriorInv);			
 			}			
 		}
-		if(event.getSlot() == 8);
-	    {
-            event.setResult(Result.DENY);
-            event.setCancelled(true);
-	    }
 	}
 	
 	public static void createInv() 

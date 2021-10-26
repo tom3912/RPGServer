@@ -138,11 +138,6 @@ public class UseClassSelectListener implements Listener
 				player.openInventory(UseClassSelectListener.warriorInv);			
 			}			
 		}
-		if(event.getSlot() == 8);
-	    {
-            event.setResult(Result.DENY);
-            event.setCancelled(true);
-	    }
 	}
 	
 	public static void createInv() 
