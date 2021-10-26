@@ -1,0 +1,17 @@
+name: Plugin
+version: 1.0
+author: Tom
+main: me.tom.ServerPlugin.Master
+description: Plugin for server
+api-version: 1.17
+
+commands:
+  debugcommand:
+    aliases: [dc]
+    description: /dc to run the debug command
+  givewand:
+    aliases: [gw]
+    description: /gw to give the player the admin wand
+  givebloodthirster:
+    aliases: [gb]
+    description: /gb to give the player the bloodthirster
