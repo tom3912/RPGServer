@@ -122,7 +122,7 @@ public class Master extends JavaPlugin
 		    			Integer mana = JoinListener.getPlayerMana(online);
 		    			Integer maxmana = JoinListener.getPlayerMaxMana(online);
 		    		
-		    			if(mana < maxmana) 
+		    			if(mana < maxmana && ManaTimer >= 20) 
 		    			{
 		    				JoinListener.addMana(online);
 		    				ManaTimer = 0;
@@ -277,7 +277,7 @@ public class Master extends JavaPlugin
 		    			}
 		    		}
 		    					    		
-		    		if(HealTimer >= 5) 
+		    		if(HealTimer >= 100) 
 		    		{
 		    			if (online.getHealth() < online.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue()) 
 		    			{
@@ -293,7 +293,8 @@ public class Master extends JavaPlugin
 		    			HealTimer = 0;
 		    		}
 		    		
-	
+		    		if(UpDateTimer >= 20) 
+		    		{
 		    			online.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(gui));	
 		    			JoinListener.createBoard(online);
 		    			UpDateTimer = 0;  
@@ -354,7 +355,7 @@ public class Master extends JavaPlugin
 		    				}
 		    			}
 		    		}
-				
+				}
 		    }
 		}.runTaskTimer(this, 0L, 20L);
 	}	
