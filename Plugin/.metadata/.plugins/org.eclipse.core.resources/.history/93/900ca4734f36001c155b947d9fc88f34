@@ -45,11 +45,11 @@ public class UseClassSelectListener implements Listener
 	}
 	
 	@EventHandler 
-	public void onClick(InventoryClickEvent event) 
+	public void ontClick(InventoryClickEvent event) 
 	{	
 		Player player = (Player) event.getWhoClicked();	
 
-		if(event.getSlot() == 8 && !player.getOpenInventory().getType().equals(InventoryType.CRAFTING));
+		if(event.getSlot() == 8 && player.getOpenInventory().getType() != InventoryType.CRAFTING);
 	    {
             event.setResult(Result.DENY);
             event.setCancelled(true);
